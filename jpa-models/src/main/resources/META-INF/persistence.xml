@@ -1,0 +1,43 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+  version="2.1">
+
+  <persistence-unit name="persistence">
+    <description>Hibernate Entity Manager Example</description>
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <class>is.technologies.models.Street</class>
+    <class>is.technologies.models.House</class>
+    <properties>
+        <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+        <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/postgres" />
+        <property name="hibernate.default_schema" value="lab3-db"/>
+        <property name="javax.persistence.jdbc.user" value="postgres" />
+        <property name="javax.persistence.jdbc.password" value="docker" />
+        <property name="hibernate.show_sql" value="true" />
+        <property name="hibernate.format_sql" value="true" />
+    </properties>
+
+  </persistence-unit>
+
+</persistence>
+
+  <!--<?xml version="1.0" encoding="UTF-8"?>-->
+  <!--<!DOCTYPE hibernate-configuration PUBLIC-->
+  <!--  "-//Hibernate/Hibernate Configuration DTD 5.3//EN"-->
+  <!--  "http://www.hibernate.org/dtd/hibernate-configuration-5.3.dtd">-->
+  <!--<hibernate-configuration>-->
+  <!--  <session-factory>-->
+
+  <!--    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>-->
+  <!--    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>-->
+  <!--    <property name="connection.url">jdbc:postgresql://localhost/postgres</property>-->
+  <!--    <property name="connection.username">postgres</property>-->
+  <!--    <property name="connection.password">docker</property>-->
+  <!--    <property name="connection.driver_class">org.postgresql.Driver</property>-->
+
+  <!--    <mapping class="models.is.technologies.Street"/>-->
+  <!--  </session-factory>-->
+  <!--</hibernate-configuration>-->
